@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CPAPresentingViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Rlb-gL-C5F">
+                    <rect key="frame" x="8" y="303.5" width="359" height="60"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X6X-1q-7Ja">
+                            <rect key="frame" x="124.5" y="0.0" width="110" height="30"/>
+                            <state key="normal" title="Original present"/>
+                            <connections>
+                                <action selector="clickOriginalPresent:" destination="-1" eventType="touchUpInside" id="8ZI-Qy-btY"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tMi-lu-7td">
+                            <rect key="frame" x="124.5" y="30" width="110" height="30"/>
+                            <state key="normal" title="Custom present"/>
+                            <connections>
+                                <action selector="clickCustomPresent:" destination="-1" eventType="touchUpInside" id="ND5-Ra-MAm"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="0.58864182229999995" green="0.59577739240000005" blue="0.58883339170000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Rlb-gL-C5F" secondAttribute="trailing" constant="8" id="4dK-D3-MXf"/>
+                <constraint firstItem="Rlb-gL-C5F" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="gan-Ad-VAd"/>
+                <constraint firstItem="Rlb-gL-C5F" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="wXp-bh-nlq"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

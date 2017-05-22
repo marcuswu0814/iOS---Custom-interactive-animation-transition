@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  CPAPresentedViewController.h
 //  CustomPresentAnimation
 //
 //  Created by Marcus Wu on 2017/5/22.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface CPAPresentedViewController : UIViewController
 
 @end
-
