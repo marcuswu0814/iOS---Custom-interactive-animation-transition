@@ -8,8 +8,11 @@
 
 #import "CPAPresentingViewController.h"
 #import "CPAPresentedViewController.h"
+#import "CPATransitioningDelegate.h"
 
 @interface CPAPresentingViewController ()
+
+@property (nonatomic, strong) id <UIViewControllerTransitioningDelegate> transitioningDelegateForPresent;
 
 @end
 
@@ -20,12 +23,19 @@
 }
 
 - (IBAction)clickOriginalPresent:(id)sender {
-    CPAPresentedViewController *viewContrller = [CPAPresentedViewController new];
+    CPAPresentedViewController *viewController = [CPAPresentedViewController new];
     
-    [self presentViewController:viewContrller animated:YES completion:nil];
+    [self presentViewController:viewController animated:YES completion:nil];
 }
 
 - (IBAction)clickCustomPresent:(id)sender {
+    CPAPresentedViewController *viewController = [CPAPresentedViewController new];
+
+    self.transitioningDelegateForPresent = [[CPATransitioningDelegate alloc] initWithToViewController:viewController];
+    
+    viewController.transitioningDelegate  = self.transitioningDelegateForPresent;
+    
+    [self presentViewController:viewController animated:YES completion:nil];
 }
 
 

@@ -15,6 +15,8 @@
 		09EECD581ED2E154001F831D /* CPAPresentingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09EECD561ED2E154001F831D /* CPAPresentingViewController.xib */; };
 		09EECD5C1ED2E189001F831D /* CPAPresentedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EECD5A1ED2E189001F831D /* CPAPresentedViewController.m */; };
 		09EECD5D1ED2E189001F831D /* CPAPresentedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09EECD5B1ED2E189001F831D /* CPAPresentedViewController.xib */; };
+		09EECD601ED35499001F831D /* CPATransitioningDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EECD5F1ED35499001F831D /* CPATransitioningDelegate.m */; };
+		09EECD631ED354FD001F831D /* CPAAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EECD621ED354FD001F831D /* CPAAnimationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,10 @@
 		09EECD591ED2E189001F831D /* CPAPresentedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPAPresentedViewController.h; sourceTree = "<group>"; };
 		09EECD5A1ED2E189001F831D /* CPAPresentedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPAPresentedViewController.m; sourceTree = "<group>"; };
 		09EECD5B1ED2E189001F831D /* CPAPresentedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CPAPresentedViewController.xib; sourceTree = "<group>"; };
+		09EECD5E1ED35499001F831D /* CPATransitioningDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPATransitioningDelegate.h; sourceTree = "<group>"; };
+		09EECD5F1ED35499001F831D /* CPATransitioningDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPATransitioningDelegate.m; sourceTree = "<group>"; };
+		09EECD611ED354FD001F831D /* CPAAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPAAnimationController.h; sourceTree = "<group>"; };
+		09EECD621ED354FD001F831D /* CPAAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPAAnimationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,18 +69,22 @@
 		09EECD391ED2DA56001F831D /* CustomPresentAnimation */ = {
 			isa = PBXGroup;
 			children = (
-				09EECD3D1ED2DA56001F831D /* AppDelegate.h */,
-				09EECD3E1ED2DA56001F831D /* AppDelegate.m */,
+				09EECD3A1ED2DA56001F831D /* Supporting Files */,
 				09EECD461ED2DA56001F831D /* Assets.xcassets */,
 				09EECD481ED2DA56001F831D /* LaunchScreen.storyboard */,
 				09EECD4B1ED2DA56001F831D /* Info.plist */,
-				09EECD3A1ED2DA56001F831D /* Supporting Files */,
+				09EECD3D1ED2DA56001F831D /* AppDelegate.h */,
+				09EECD3E1ED2DA56001F831D /* AppDelegate.m */,
 				09EECD541ED2E154001F831D /* CPAPresentingViewController.h */,
 				09EECD551ED2E154001F831D /* CPAPresentingViewController.m */,
 				09EECD561ED2E154001F831D /* CPAPresentingViewController.xib */,
 				09EECD591ED2E189001F831D /* CPAPresentedViewController.h */,
 				09EECD5A1ED2E189001F831D /* CPAPresentedViewController.m */,
 				09EECD5B1ED2E189001F831D /* CPAPresentedViewController.xib */,
+				09EECD5E1ED35499001F831D /* CPATransitioningDelegate.h */,
+				09EECD5F1ED35499001F831D /* CPATransitioningDelegate.m */,
+				09EECD611ED354FD001F831D /* CPAAnimationController.h */,
+				09EECD621ED354FD001F831D /* CPAAnimationController.m */,
 			);
 			path = CustomPresentAnimation;
 			sourceTree = "<group>";
@@ -160,8 +170,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				09EECD5C1ED2E189001F831D /* CPAPresentedViewController.m in Sources */,
+				09EECD631ED354FD001F831D /* CPAAnimationController.m in Sources */,
 				09EECD571ED2E154001F831D /* CPAPresentingViewController.m in Sources */,
 				09EECD3F1ED2DA56001F831D /* AppDelegate.m in Sources */,
+				09EECD601ED35499001F831D /* CPATransitioningDelegate.m in Sources */,
 				09EECD3C1ED2DA56001F831D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -311,6 +323,7 @@
 				09EECD501ED2DA56001F831D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
