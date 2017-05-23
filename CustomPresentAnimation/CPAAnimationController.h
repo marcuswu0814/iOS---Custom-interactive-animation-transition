@@ -9,7 +9,11 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+@class CPASwipeInteractiveTransition;
+
 @interface CPAAnimationController : NSObject <UIViewControllerAnimatedTransitioning>
+
+- (instancetype)initWithInteractiveTransition:(CPASwipeInteractiveTransition *)interactiveTransition;
 
 @property (nonatomic) BOOL isDismiss;
 

@@ -8,7 +8,14 @@
 
 #import "CPATransitioningDelegate.h"
 #import "CPAAnimationController.h"
+#import "CPASwipeInteractiveTransition.h"
 
+@interface CPATransitioningDelegate ()
+
+@property (nonatomic, strong) CPASwipeInteractiveTransition *swipeInteractiveTransition;
+@property (nonatomic, weak) UIViewController *toViewController;
+
+@end
 
 @implementation CPATransitioningDelegate
 
@@ -16,16 +23,23 @@
     self = [super init];
     
     if (self) {
-        
+        self.toViewController = toViewController;
     }
     
     return self;
 }
 
+- (CPASwipeInteractiveTransition *)swipeInteractiveTransition {
+    if (!_swipeInteractiveTransition) {
+        _swipeInteractiveTransition = [[CPASwipeInteractiveTransition alloc] initWithToViewController:self.toViewController];
+    }
+    
+    return _swipeInteractiveTransition;
+}
 
 - (id <UIViewControllerAnimatedTransitioning>)animationController {
     if (!_animationController) {
-        _animationController = [[CPAAnimationController alloc] init];
+        _animationController = [[CPAAnimationController alloc] initWithInteractiveTransition:self.swipeInteractiveTransition];
     }
     
     return _animationController;
@@ -45,5 +59,14 @@
     return self.animationController;
 }
 
+#pragma mark - Interactive
+
+- (id<UIViewControllerInteractiveTransitioning>)interactionControllerForDismissal:(id<UIViewControllerAnimatedTransitioning>)animator {
+    return self.swipeInteractiveTransition.interacting ? self.swipeInteractiveTransition : nil;
+}
+
+- (id<UIViewControllerInteractiveTransitioning>)interactionControllerForPresentation:(id<UIViewControllerAnimatedTransitioning>)animator {
+    return self.swipeInteractiveTransition.interacting ? self.swipeInteractiveTransition : nil;
+}
 
 @end
